@@ -22,6 +22,5 @@ npx nx g @nrwl/react:lib components
 
 ```sh
 nx g @nrwl/react:cypress-component-configuration --project=components
-
 nx component-test components --watch
 ```
