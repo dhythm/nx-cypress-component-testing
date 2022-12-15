@@ -2,6 +2,8 @@
 
 ## Set up environment
 
+https://nx.dev/react-tutorial/1-code-generation
+
 ```sh
 npx create-nx-workspace@latest
 
@@ -16,4 +18,10 @@ npx create-nx-workspace@latest
 ```sh
 npx nx g @nrwl/react:app something
 npx nx g @nrwl/react:lib components
+```
+
+```sh
+nx g @nrwl/react:cypress-component-configuration --project=components
+
+nx component-test components --watch
 ```
