@@ -1,9 +1,9 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import viteTsConfigPaths from 'vite-tsconfig-paths';
-import dts from 'vite-plugin-dts';
 import { join } from 'path';
+import { defineConfig } from 'vite';
+import dts from 'vite-plugin-dts';
+import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [
@@ -43,5 +43,9 @@ export default defineConfig({
     },
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+    // https://github.com/chakra-ui/chakra-ui/issues/6783#issuecomment-1283788233
+    deps: {
+      fallbackCJS: true,
+    },
   },
 });

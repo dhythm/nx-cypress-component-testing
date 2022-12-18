@@ -1,9 +1,5 @@
 {
-  "presets": ["@nrwl/react/babel", ["@babel/preset-env"]],
+  "presets": ["@nrwl/react/babel"],
   "babelrcRoots": ["*"],
-  "plugins": [
-    ["@babel/plugin-proposal-private-property-in-object", { "loose": true }],
-    ["@babel/plugin-proposal-private-methods", { "loose": true }],
-    ["@babel/plugin-proposal-class-properties", { "loose": true }]
-  ]
+  "plugins": []
 }
