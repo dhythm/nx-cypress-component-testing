@@ -3,7 +3,7 @@ import { Checkbox } from './';
 
 describe('Checkbox', () => {
   it('Snap Shot', () => {
-    const component = renderer.create(<Checkbox label="confirm" checked />);
+    const component = renderer.create(<Checkbox label="confirm" isChecked />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

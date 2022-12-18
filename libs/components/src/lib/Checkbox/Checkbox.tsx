@@ -1,12 +1,11 @@
 import React from 'react';
-import { Checkbox as MuiCheckbox, FormControlLabel } from '@mui/material';
-export type Props = { label: string; checked: boolean };
+import { ChakraProvider, Checkbox as CuiCheckbox } from '@chakra-ui/react';
+export type Props = { label: string; isChecked: boolean };
 
-export const Checkbox: React.FC<Props> = ({ label, checked }) => {
+export const Checkbox: React.FC<Props> = ({ label, isChecked }) => {
   return (
-    <FormControlLabel
-      label={label}
-      control={<MuiCheckbox checked={checked} />}
-    />
+    <ChakraProvider>
+      <CuiCheckbox isChecked={isChecked}>{label}</CuiCheckbox>
+    </ChakraProvider>
   );
 };
