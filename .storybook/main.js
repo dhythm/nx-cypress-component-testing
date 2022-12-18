@@ -1,12 +1,14 @@
-import type { StorybookConfig } from '@storybook/core-common';
-
-export const rootMain: StorybookConfig = {
+module.exports = {
   stories: [],
   addons: ['@storybook/addon-essentials'],
+  // uncomment the property below if you want to apply some webpack config globally
   // webpackFinal: async (config, { configType }) => {
   //   // Make whatever fine-grained changes you need that should apply to all storybook configs
 
   //   // Return the altered config
   //   return config;
   // },
+
+  // https://github.com/storybookjs/storybook/issues/15336#issuecomment-906809203
+  typescript: { reactDocgen: false },
 };
