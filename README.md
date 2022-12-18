@@ -24,3 +24,8 @@ npx nx g @nrwl/react:lib components
 nx g @nrwl/react:cypress-component-configuration --project=components
 nx component-test components --watch
 ```
+
+```sh
+npm i -D @nrwl/storybook
+nx g @nrwl/storybook:configuration components --tsConfiguration=true
+```

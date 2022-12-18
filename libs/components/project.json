@@ -7,20 +7,14 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/components/**/*.{ts,tsx,js,jsx}"
-        ]
+        "lintFilePatterns": ["libs/components/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "build": {
       "executor": "@nrwl/vite:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/libs/components"
@@ -32,9 +26,7 @@
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": [
-        "{projectRoot}/coverage"
-      ],
+      "outputs": ["{projectRoot}/coverage"],
       "options": {
         "passWithNoTests": true
       }
@@ -46,6 +38,37 @@
         "testingType": "component",
         "devServerTarget": "components:build",
         "skipServe": true
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/react",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/components/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/react",
+        "outputPath": "dist/storybook/components",
+        "config": {
+          "configFolder": "libs/components/.storybook"
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
       }
     }
   }
