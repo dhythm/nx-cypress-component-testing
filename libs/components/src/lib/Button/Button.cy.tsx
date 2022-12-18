@@ -1,6 +1,11 @@
-import { Button } from "./Button"
+import { Button } from './Button';
+import { ChakraProvider } from '@chakra-ui/react';
 
 it('Button', () => {
-  cy.mount(<Button />);
-  cy.get('div').contains('');
-})
+  cy.mount(
+    <ChakraProvider>
+      <Button text="click me" />
+    </ChakraProvider>
+  );
+  cy.get('div').contains('click me');
+});

@@ -1,6 +1,9 @@
 import React from 'react';
-export type Props = {};
+import { Button as CuiButton } from '@chakra-ui/react';
+export type Props = {
+  text: string;
+};
 
-export const Button: React.FC<Props> = (props) => {
-  return <div></div>;
+export const Button: React.FC<Props> = ({ text }) => {
+  return <CuiButton colorScheme={'blue'}>{text}</CuiButton>;
 };
