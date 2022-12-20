@@ -1,5 +1,4 @@
 {
-  "presets": ["@nrwl/react/babel"],
   "babelrcRoots": ["*"],
-  "plugins": []
+  "ignore": ["node_modules"]
 }
