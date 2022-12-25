@@ -41,7 +41,7 @@ npx nx g @nrwl/react:lib something
 
 npx nx g @nrwl/webpack:webpack-project something
 npx nx g @nrwl/react:cypress-component-configuration --project=something --build-target=something:build
-✔ Automatically generate tests for components declared in this project? (y/N) · false
+✔ Automatically generate tests for components declared in this project? (y/N) · true
 npx nx component-test something
 ```
 
