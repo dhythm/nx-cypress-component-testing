@@ -15,14 +15,34 @@ npx create-nx-workspace@latest
 ✔ Enable distributed caching to make your CI faster · No
 ```
 
-```sh
-npx nx g @nrwl/react:app something
-npx nx g @nrwl/react:lib components
-```
+### Create an app
 
 ```sh
-nx g @nrwl/react:cypress-component-configuration --project=components
-nx component-test components --watch
+npx nx g @nrwl/react:app something
+```
+
+### Create an lib with vite
+
+```sh
+npx nx g @nrwl/react:lib components
+✔ Which bundler would you like to use to build the library? Choose 'none' to skip build setup. · vite
+
+npx nx g @nrwl/react:cypress-component-configuration --project=components
+✔ Automatically generate tests for components declared in this project? (y/N) · false
+
+npx nx component-test components
+```
+
+### Create an lib with webpack
+
+```sh
+npx nx g @nrwl/react:lib something
+✔ Which bundler would you like to use to build the library? Choose 'none' to skip build setup. · none
+
+npx nx g @nrwl/webpack:webpack-project something
+npx nx g @nrwl/react:cypress-component-configuration --project=something --build-target=something:build
+✔ Automatically generate tests for components declared in this project? (y/N) · false
+npx nx component-test something
 ```
 
 ```sh

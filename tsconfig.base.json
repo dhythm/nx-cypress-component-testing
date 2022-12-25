@@ -18,7 +18,8 @@
       "@nx-cypress-component-testing/components": [
         "libs/components/src/index.ts"
       ],
-      "@nx-cypress-component-testing/icons": ["libs/icons/src/index.ts"]
+      "@nx-cypress-component-testing/icons": ["libs/icons/src/index.ts"],
+      "@nx-cypress-component-testing/something": ["libs/something/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
