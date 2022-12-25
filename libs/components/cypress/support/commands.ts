@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 import { mount } from 'cypress/react18';
 
 // ***********************************************
@@ -21,6 +22,10 @@ declare global {
     }
   }
 }
+
+addMatchImageSnapshotCommand({
+  customSnapshotsDir: 'snapshots',
+});
 
 Cypress.Commands.add('mount', mount);
 
