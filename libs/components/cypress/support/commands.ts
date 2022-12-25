@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { mount } from 'cypress/react18'
+import { mount } from 'cypress/react18';
 
 // ***********************************************
 // This example commands.ts shows you how to
@@ -12,7 +12,7 @@ import { mount } from 'cypress/react18'
 // ***********************************************
 
 declare global {
-// eslint-disable-next-line @typescript-eslint/no-namespace
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace Cypress {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     interface Chainable<Subject> {
@@ -22,7 +22,7 @@ declare global {
   }
 }
 
-Cypress.Commands.add('mount', mount)
+Cypress.Commands.add('mount', mount);
 
 //
 // -- This is a parent command --
