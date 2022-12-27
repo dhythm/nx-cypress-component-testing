@@ -22,7 +22,12 @@
       "@nx-cypress-component-testing/my-plugin": [
         "libs/my-plugin/src/index.ts"
       ],
-      "@nx-cypress-component-testing/something": ["libs/something/src/index.ts"]
+      "@nx-cypress-component-testing/something": [
+        "libs/something/src/index.ts"
+      ],
+      "@nx-cypress-component-testing/ws-generated-components": [
+        "libs/ws-generated-components/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

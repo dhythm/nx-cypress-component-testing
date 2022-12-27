@@ -63,5 +63,5 @@ The section of workspace-generator works in progress.
 
 ```sh
 npx nx g @nrwl/workspace:workspace-generator ws-generator
-npx nx workspace-generator ws-generator
+npx nx workspace-generator ws-generator --name <library_name>
 ```
