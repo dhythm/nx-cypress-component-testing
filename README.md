@@ -56,6 +56,9 @@ nx g @nrwl/storybook:configuration components --tsConfiguration=true
 npm install @nrwl/nx-plugin@latest
 npx nx g @nrwl/nx-plugin:plugin my-plugin
 npx nx generate @nrwl/nx-plugin:generator my-generator --project=my-plugin
+npx nx g my-generator
+```
 
-npx nx workspace-generator my-plugin
+```sh
+npx nx workspace-generator ws-plugin
 ```
