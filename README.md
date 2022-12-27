@@ -59,6 +59,9 @@ npx nx generate @nrwl/nx-plugin:generator my-generator --project=my-plugin
 npx nx g my-generator
 ```
 
+The section of workspace-generator works in progress.
+
 ```sh
-npx nx workspace-generator ws-plugin
+npx nx g @nrwl/workspace:workspace-generator ws-generator
+npx nx workspace-generator ws-generator
 ```
