@@ -49,3 +49,13 @@ npx nx component-test something
 npm i -D @nrwl/storybook
 nx g @nrwl/storybook:configuration components --tsConfiguration=true
 ```
+
+### Set up workspace generator and local generator
+
+```sh
+npm install @nrwl/nx-plugin@latest
+npx nx g @nrwl/nx-plugin:plugin my-plugin
+npx nx generate @nrwl/nx-plugin:generator my-generator --project=my-plugin
+
+npx nx workspace-generator my-plugin
+```

@@ -19,6 +19,9 @@
         "libs/components/src/index.ts"
       ],
       "@nx-cypress-component-testing/icons": ["libs/icons/src/index.ts"],
+      "@nx-cypress-component-testing/my-plugin": [
+        "libs/my-plugin/src/index.ts"
+      ],
       "@nx-cypress-component-testing/something": ["libs/something/src/index.ts"]
     }
   },
